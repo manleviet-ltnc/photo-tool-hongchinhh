@@ -7,7 +7,7 @@
     <ProjectGuid>{059D98E0-A528-4B50-97CB-C619BBAC4BF2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MyPhotos</RootNamespace>
-    <AssemblyName>MyPhotos</AssemblyName>
+    <AssemblyName>ri</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -77,6 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyPhotoAlbum\MyPhotoAlbum.csproj">
+      <Project>{65f3417a-aa06-49cd-91f4-08a689927a0c}</Project>
+      <Name>MyPhotoAlbum</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
