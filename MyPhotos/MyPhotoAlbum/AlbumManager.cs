@@ -64,7 +64,7 @@ namespace Maining.MyPhotoAlbum
 
         }
 
-        private AlbumManager()
+        public AlbumManager()
         {
             _album = new PhotoAlbum();
 

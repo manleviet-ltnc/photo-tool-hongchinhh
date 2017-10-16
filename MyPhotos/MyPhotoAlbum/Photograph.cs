@@ -150,7 +150,7 @@ namespace Maining.MyPhotoAlbum
                 _bitmap = null;
             }
         }
-        public void Dipose()
+        public void Dispose()
         {
             ReleaseImage();      
         }

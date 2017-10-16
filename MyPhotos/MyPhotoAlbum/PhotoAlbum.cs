@@ -55,7 +55,7 @@ namespace Maining.MyPhotoAlbum
         }
         protected override void RemoveItem(int index)
         {
-            Items[index].Dipose();
+            Items[index].Dispose();
             base.RemoveItem(index);
             HasChanged = true;
         }
@@ -67,7 +67,7 @@ namespace Maining.MyPhotoAlbum
         public void Dispose()
         {
             foreach (Photograph p in this)
-                p.Dipose();
+                p.Dispose();
         }
     }
 }

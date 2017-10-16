@@ -29,9 +29,10 @@ namespace MyPhotos
         public MainForm()
         {
             InitializeComponent();
+            NewAlbum();
             SetTitleBar();
             SetStatusStrip(null);
-            NewAlbum();
+            
 
         }
         private void NewAlbum()
@@ -52,8 +53,9 @@ namespace MyPhotos
         private void SetTitleBar()
         {
             Version ver = new Version(Application.ProductVersion);
+           
             String name = Manager.Fullname;
-            Text = String.Format("{2}MyPhotos {0:0}.{1:0}",
+            Text = String.Format("{2} - MyPhotos {0:0}.{1:0}",
                                         ver.Major, ver.Minor,
                                          string.IsNullOrEmpty(name) ? "Untitled" : name);
 
@@ -239,7 +241,7 @@ namespace MyPhotos
                     if (index < 0)
                         Manager.Album.Add(photo);
                     else
-                        photo.Dipose();
+                        photo.Dispose();
 
                 }
                 Manager.Index = Manager.Album.Count - 1;
@@ -287,4 +289,4 @@ namespace MyPhotos
     }
 }
 
-                                                                                                                                             {
+                          
