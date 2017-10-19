@@ -61,7 +61,7 @@ namespace Maining.MyPhotoAlbum
                     x = xPos * bmp.Width / displayRect.Width;
                     y = yPos * bmp.Height / displayRect.Height;
                     break;
-                case PictureBoxSizeMode.Zoom;
+                case PictureBoxSizeMode.Zoom:
                     // Determine image rectangel
                     Rectangle r2 = ImageUtility.ScaleToFit(bmp, displayRect);
 

@@ -71,6 +71,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 136);
             this.panel1.TabIndex = 3;
+            
             // 
             // BaseEditDialog
             // 

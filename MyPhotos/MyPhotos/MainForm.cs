@@ -347,7 +347,8 @@ namespace MyPhotos
         private void ctxMenuPhoto_Opening(object sender, CancelEventArgs e)
         {
             mnuNext.Enabled = (Manager.Index < Manager.Album.Count - 1);
-            mnuEditPrevious.Enabled = (Manager.Index > 0);  
+            mnuEditPrevious.Enabled = (Manager.Index > 0);
+            mnuPhotoProps.Enabled = (Manager.Current != null);
                 
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -393,6 +394,17 @@ namespace MyPhotos
         private void pbxPhoto_MouseMove(object sender, MouseEventArgs e)
         {
             UpdatePixelDialog(e.X, e.Y);
+        }
+
+        private void mnuPhotoProps_Click(object sender, EventArgs e)
+        {
+            if (Manager.Current == null)
+                return; 
+            using (PhotoEditDialog dlg = new PhotoEditDialog(Manager))
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                    DisplayAlbum();
+            }
         }
     }
 }

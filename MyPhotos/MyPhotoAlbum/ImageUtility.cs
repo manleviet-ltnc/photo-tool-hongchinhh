@@ -29,7 +29,7 @@ namespace Maining.MyPhotoAlbum
                 // Final height should match target,
                 // determine and center height
                 result.Width = result.Height * bmp.Width / bmp.Height;
-                result.X += (targetArea.Width - result.Width)/2
+                result.X += (targetArea.Width - result.Width) / 2;
 
             }
             return result;
