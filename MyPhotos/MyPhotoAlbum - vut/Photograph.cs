@@ -11,7 +11,7 @@ namespace Maining.MyPhotoAlbum
     /// The Photograph glass represent a photogaphic 
     /// image store in the file system
     /// </summary>
-
+    
     public class Photograph : IDisposable // hủy đối tượng Photograph
     {
         // biến thành phần dùng để luuw trữ trong một lớp 
@@ -23,7 +23,7 @@ namespace Maining.MyPhotoAlbum
         {
             // sư dung chỉ muốn lấy dl trong filename không cho người lập trình gán dl vào
             get { return this._fileName; }
-
+                               
         }
 
 
@@ -51,38 +51,38 @@ namespace Maining.MyPhotoAlbum
                 if (_caption != value)
                 {
                     _caption = value;
-                    HasChanged = true;
+                    HasChanged = true;       
                 }
             }
         }
         private string _photrgapher = "";
-
-        public string Photographer
+        
+        public string Photogapher
         {
             get { return _photrgapher; }
             set
             {
-                if (_photrgapher != value)
+                if(_photrgapher != value)
                 {
                     _photrgapher = value;
-                    HasChanged = true;
-
+                   HasChanged = true;
+                  
 
                 }
 
             }
         }
         private DateTime _dateTaken = DateTime.Now;
-
+        
         public DateTime DateTaken
         {
             get { return _dateTaken; }
-            set
+             set
             {
                 if (_dateTaken != value)
                 {
                     _dateTaken = value;
-                    HasChanged = true;
+                    HasChanged = true; 
                 }
             }
 
@@ -101,7 +101,7 @@ namespace Maining.MyPhotoAlbum
                 {
                     _notes = value;
                     HasChanged = true;
-
+                   
                 }
             }
         }
@@ -117,7 +117,7 @@ namespace Maining.MyPhotoAlbum
         }
 
 
-        public Photograph(string fileName)
+        public Photograph( string fileName)
         {
             _fileName = fileName;
             _bitmap = null;
@@ -144,7 +144,7 @@ namespace Maining.MyPhotoAlbum
         }
         public void ReleaseImage()
         {
-            if (_bitmap != null)
+            if ( _bitmap != null)
             {
                 _bitmap.Dispose();
                 _bitmap = null;
@@ -152,7 +152,7 @@ namespace Maining.MyPhotoAlbum
         }
         public void Dispose()
         {
-            ReleaseImage();
+            ReleaseImage();      
         }
     }
 }

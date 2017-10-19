@@ -31,7 +31,7 @@ namespace Maining.MyPhotoAlbum
             }
         }
 
-        public Photograph Add(string filename)
+        public Photograph Add (string filename)
         {
             Photograph p = new Photograph(filename);
             base.Add(p);

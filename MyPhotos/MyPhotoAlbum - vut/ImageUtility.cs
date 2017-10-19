@@ -14,7 +14,7 @@ namespace Maining.MyPhotoAlbum
             Rectangle result = new Rectangle(targetArea.Location, targetArea.Size);
 
             // determine best fit: width or height
-            if (result.Height * bmp.Width > result.Width * bmp.Height)
+            if(result.Height * bmp.Width > result.Width * bmp.Height)
             {
                 // Final width should match target,
                 // determine and center height

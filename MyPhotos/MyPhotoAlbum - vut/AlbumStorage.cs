@@ -51,7 +51,7 @@ namespace Maining.MyPhotoAlbum
 
             sw.WriteLine((p.Caption != null) ? p.Caption : "");
             sw.WriteLine(p.DateTaken.ToString());
-            sw.WriteLine((p.Photographer != null) ? p.Photographer : "");
+            sw.WriteLine((p.Photogapher != null) ? p.Photogapher : "");
             sw.WriteLine((p.Notes != null) ? p.Notes : "");
 
         }
@@ -89,7 +89,7 @@ namespace Maining.MyPhotoAlbum
 
             }
         }
-        static private void ReadAlbumV63(StreamReader sr, PhotoAlbum album)
+        static private void  ReadAlbumV63( StreamReader sr, PhotoAlbum album)
         {
             Photograph p;
             do
@@ -101,21 +101,21 @@ namespace Maining.MyPhotoAlbum
             while (p != null);
 
         }
-        static private Photograph ReadPhotoV63(StreamReader sr)
+        static private Photograph ReadPhotoV63 (StreamReader sr)
         {
             string file = sr.ReadLine();
             if (file == null || file.Length == 0)
 
-                return null;
+                return null; 
             Photograph p = new Photograph(file);
 
             p.Caption = sr.ReadLine();
             p.DateTaken = DateTime.Parse(sr.ReadLine());
-            p.Photographer = sr.ReadLine();
+            p.Photogapher = sr.ReadLine();
             p.Notes = sr.ReadLine();
 
             return p;
         }
-    }
+    } 
 
 }

@@ -18,7 +18,7 @@ namespace Maining.MyPhotoAlbum
         }
         static AlbumManager()
         {
-            _defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\Albums";
+            _defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal) +@"\Albums";
             // lay den thu muc my document
         }
         private int _pos = -1;
@@ -69,7 +69,7 @@ namespace Maining.MyPhotoAlbum
             _album = new PhotoAlbum();
 
         }
-        public AlbumManager(string name) : this()
+        public AlbumManager (string name) : this ()
         {
             _name = name;
             _album = AlbumStorage.ReadAlbum(name);
@@ -95,7 +95,7 @@ namespace Maining.MyPhotoAlbum
                 return Current.Image;
             }
         }
-        static public bool AlbumExits(string name)
+         static public bool  AlbumExits (string name)
         {
             return File.Exists(name);
         }
@@ -103,10 +103,10 @@ namespace Maining.MyPhotoAlbum
         {
             if (Fullname == null)
                 throw new InvalidOperationException("Unable to save albm with no name");
-            AlbumStorage.WriteAlbum(Album, Fullname);
-
+                    AlbumStorage.WriteAlbum(Album, Fullname);
+        
         }
-        public void Save(string name, bool overwrite)
+        public void Save( string name, bool overwrite)
         {
             if (name == null)
                 throw new ArgumentNullException("name");
@@ -130,6 +130,6 @@ namespace Maining.MyPhotoAlbum
             Index--;
             return true;
         }
-
+             
     }
 }

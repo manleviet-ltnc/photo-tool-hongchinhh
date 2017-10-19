@@ -79,10 +79,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyPhotoAlbum\MyPhotoAlbum.csproj">
-      <Project>{65f3417a-aa06-49cd-91f4-08a689927a0c}</Project>
-      <Name>MyPhotoAlbum</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyPhotoControls\MyPhotoControls.csproj">
       <Project>{47595ca6-7e7f-448b-923d-4063e88b1d90}</Project>
       <Name>MyPhotoControls</Name>

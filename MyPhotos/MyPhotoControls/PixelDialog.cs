@@ -29,21 +29,21 @@ namespace Maining.MyPhotoAlbum
             lblY.Text = ToString();
             lblRed.Text = ToString();
             lblGreen.Text = ToString();
-            lblBlue.Text = ToString(); 
+            lblBlue.Text = ToString();
         }
         public void ClearPixelData()
         {
             SetPixelData(0, 0, 0, 0, 0);
         }
-        public void UpdatePixelData( int xPos,int yPos, Bitmap bmp,
+        public void UpdatePixelData(int xPos, int yPos, Bitmap bmp,
                                         Rectangle displayRect, Rectangle bmpRect,
                                         PictureBoxSizeMode sizeMode)
         {
             // Determin (x,y) position within image
 
             int x = 0, y = 0;
-                
-            switch(sizeMode)
+
+            switch (sizeMode)
             {
                 case PictureBoxSizeMode.AutoSize:
                 case PictureBoxSizeMode.CenterImage:
